@@ -106,3 +106,5 @@ export interface AnalyticsSummary {
   lowStockCount: number;
   openTicketsCount: number;
 }
+
+export * from "./contract";

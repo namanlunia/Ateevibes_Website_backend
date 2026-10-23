@@ -335,4 +335,99 @@ export class InventoryService {
       }
     });
   }
+
+  /**
+   * Cron job method: auto-releases expired active stock reservations
+   * Decrements variantStock.reserved by quantity, sets status EXPIRED,
+   * and creates an inventoryMovement of type RELEASE.
+   */
+  async releaseExpiredReservations() {
+    if (!this.prisma.isConnected) return { released: 0 };
+
+    return this.prisma.$transaction(async (tx) => {
+      const now = new Date();
+      const expired = await tx.stockReservation.findMany({
+        where: {
+          status: "ACTIVE",
+          expiresAt: { lt: now },
+        },
+      });
+
+      for (const res of expired) {
+        await tx.variantStock.update({
+          where: {
+            variantId_size: {
+              variantId: res.variantId,
+              size: res.size,
+            },
+          },
+          data: {
+            reserved: { decrement: res.quantity },
+          },
+        });
+
+        await tx.stockReservation.update({
+          where: { id: res.id },
+          data: { status: "EXPIRED" },
+        });
+
+        await tx.inventoryMovement.create({
+          data: {
+            variantId: res.variantId,
+            size: res.size,
+            type: "RELEASE",
+            quantity: res.quantity,
+            referenceOrderId: res.orderId,
+            notes: `Auto-released expired reservation for order ${res.orderId}`,
+          },
+        });
+      }
+
+      return { released: expired.length };
+    });
+  }
+
+  /**
+   * Release active reservations on order creation rollback
+   */
+  async releaseReservationForCreatedOrder(orderId: string) {
+    if (!this.prisma.isConnected) return;
+
+    return this.prisma.$transaction(async (tx) => {
+      const reservations = await tx.stockReservation.findMany({
+        where: { orderId, status: "ACTIVE" },
+      });
+
+      for (const res of reservations) {
+        await tx.variantStock.update({
+          where: {
+            variantId_size: {
+              variantId: res.variantId,
+              size: res.size,
+            },
+          },
+          data: {
+            reserved: { decrement: res.quantity },
+          },
+        });
+
+        await tx.stockReservation.update({
+          where: { id: res.id },
+          data: { status: "RELEASED" },
+        });
+
+        await tx.inventoryMovement.create({
+          data: {
+            variantId: res.variantId,
+            size: res.size,
+            type: "RELEASE",
+            quantity: res.quantity,
+            referenceOrderId: orderId,
+            notes: `Rollback reservation for failed order creation ${orderId}`,
+          },
+        });
+      }
+    });
+  }
+
 }

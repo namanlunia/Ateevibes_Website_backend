@@ -1,3 +1,4 @@
+import { ScheduleModule } from "@nestjs/schedule";
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';
@@ -37,6 +38,7 @@ import { MediaModule } from './modules/media/media.module';
         limit: 120, // 120 requests per minute
       },
     ]),
+    ScheduleModule.forRoot(),
     PrismaModule,
     AuthModule,
     UsersModule,

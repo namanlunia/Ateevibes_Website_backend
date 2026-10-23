@@ -366,6 +366,7 @@ model Order {
   refunds               Refund[]
   createdAt             DateTime              @default(now())
   updatedAt             DateTime              @updatedAt
+  @@index([customerId])
 }
 
 model OrderItem {
@@ -384,6 +385,7 @@ model OrderItem {
   quantity    Int
   subtotal    Decimal        @db.Decimal(10, 2)
   imageUrl    String?
+  @@index([orderId])
 }
 
 model OrderAddressSnapshot {
@@ -400,6 +402,7 @@ model OrderAddressSnapshot {
   state        String
   pincode      String
   createdAt    DateTime @default(now())
+  @@index([email])
 }
 
 model Payment {
@@ -416,6 +419,7 @@ model Payment {
   events           PaymentEvent[]
   createdAt        DateTime       @default(now())
   updatedAt        DateTime       @updatedAt
+  @@index([orderId])
 }
 
 model PaymentEvent {

@@ -7,23 +7,29 @@ import {
   IsBoolean,
   Min,
   ValidateNested,
-} from 'class-validator';
-import { Type } from 'class-transformer';
-import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { PaymentMethod } from '@ateevibes/shared';
+} from "class-validator";
+import { Type } from "class-transformer";
+import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
+import {
+  PaymentMethod,
+  CreateOrderPayload,
+  QuoteRequestPayload,
+  CheckoutItemPayload,
+  ShippingAddressPayload,
+} from "@ateevibes/shared";
 
-export class CheckoutItemDto {
-  @ApiProperty({ example: 'prod-uuid' })
+export class CheckoutItemDto implements CheckoutItemPayload {
+  @ApiProperty({ example: "prod-uuid" })
   @IsString()
   @IsNotEmpty()
   productId!: string;
 
-  @ApiProperty({ example: 'variant-uuid' })
+  @ApiProperty({ example: "variant-uuid" })
   @IsString()
   @IsNotEmpty()
   variantId!: string;
 
-  @ApiProperty({ example: 'M' })
+  @ApiProperty({ example: "M" })
   @IsString()
   @IsNotEmpty()
   size!: string;
@@ -34,23 +40,23 @@ export class CheckoutItemDto {
   quantity!: number;
 }
 
-export class ShippingAddressDto {
-  @ApiProperty({ example: 'Naman Lunia' })
+export class ShippingAddressDto implements ShippingAddressPayload {
+  @ApiProperty({ example: "Naman Lunia" })
   @IsString()
   @IsNotEmpty()
   fullName!: string;
 
-  @ApiProperty({ example: '9876543210' })
+  @ApiProperty({ example: "9876543210" })
   @IsString()
   @IsNotEmpty()
   phone!: string;
 
-  @ApiProperty({ example: 'naman@ateevibes.com' })
+  @ApiProperty({ example: "naman@ateevibes.com" })
   @IsString()
   @IsNotEmpty()
   email!: string;
 
-  @ApiProperty({ example: 'Flat 402, Royal Palms' })
+  @ApiProperty({ example: "Flat 402, Royal Palms" })
   @IsString()
   @IsNotEmpty()
   addressLine1!: string;
@@ -65,30 +71,30 @@ export class ShippingAddressDto {
   @IsString()
   landmark?: string;
 
-  @ApiProperty({ example: 'Surat' })
+  @ApiProperty({ example: "Surat" })
   @IsString()
   @IsNotEmpty()
   city!: string;
 
-  @ApiProperty({ example: 'Gujarat' })
+  @ApiProperty({ example: "Gujarat" })
   @IsString()
   @IsNotEmpty()
   state!: string;
 
-  @ApiProperty({ example: '395007' })
+  @ApiProperty({ example: "395007" })
   @IsString()
   @IsNotEmpty()
   pincode!: string;
 }
 
-export class QuoteCheckoutDto {
+export class QuoteCheckoutDto implements QuoteRequestPayload {
   @ApiProperty({ type: [CheckoutItemDto] })
   @IsArray()
   @ValidateNested({ each: true })
   @Type(() => CheckoutItemDto)
   items!: CheckoutItemDto[];
 
-  @ApiPropertyOptional({ example: 'VIBE10' })
+  @ApiPropertyOptional({ example: "ATEE10" })
   @IsOptional()
   @IsString()
   promoCode?: string;
@@ -104,7 +110,7 @@ export class QuoteCheckoutDto {
   isExpress?: boolean;
 }
 
-export class CreateOrderDto {
+export class CreateOrderDto implements CreateOrderPayload {
   @ApiProperty({ type: [CheckoutItemDto] })
   @IsArray()
   @ValidateNested({ each: true })
@@ -121,10 +127,15 @@ export class CreateOrderDto {
   @IsNotEmpty()
   paymentMethod!: PaymentMethod;
 
-  @ApiPropertyOptional({ example: 'VIBE10' })
+  @ApiPropertyOptional({ example: "ATEE10" })
   @IsOptional()
   @IsString()
   promoCode?: string;
+
+  @ApiPropertyOptional({ default: false })
+  @IsOptional()
+  @IsBoolean()
+  isCod?: boolean;
 
   @ApiPropertyOptional({ default: false })
   @IsOptional()

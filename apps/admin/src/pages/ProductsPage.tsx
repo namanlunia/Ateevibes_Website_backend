@@ -1,28 +1,58 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Filter, Edit, Archive, Plus, Check, X, Shirt } from 'lucide-react';
-import { apiClient } from '../api/client';
-import { Product } from '../types';
+import React, { useState, useEffect } from "react";
+import { Search, Edit, Archive, Plus } from "lucide-react";
+import { apiClient } from "../api/client";
+import { Product } from "../types";
+import { ProductFormModal } from "../components/products/ProductFormModal";
+
+interface CategoryOption {
+  id: string;
+  slug: string;
+  name: string;
+  subCategories?: { id: string; slug: string; name: string }[];
+}
+
+const FALLBACK_CATEGORIES: CategoryOption[] = [
+  { id: "cat-round-neck", slug: "round-neck", name: "Round Neck Tees" },
+  { id: "cat-polo-collar", slug: "polo-collar", name: "Polo & Collar Tees" },
+  { id: "cat-jacquard", slug: "jacquard", name: "Jacquard Knits" },
+  { id: "cat-printed", slug: "printed", name: "Printed & Tai Dai" },
+];
 
 export const ProductsPage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<CategoryOption[]>(FALLBACK_CATEGORIES);
   const [isLoading, setIsLoading] = useState(true);
-  const [search, setSearch] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  // Product Form Modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
-  const [editPrice, setEditPrice] = useState<number>(0);
-  const [editStatus, setEditStatus] = useState<string>('active');
-  const [isSaving, setIsSaving] = useState(false);
+
+  // Fetch dynamic categories from GET /categories
+  useEffect(() => {
+    apiClient<CategoryOption[]>("categories")
+      .then((res) => {
+        if (Array.isArray(res) && res.length > 0) {
+          setCategories(res);
+        }
+      })
+      .catch(() => {
+        // Graceful fallback to static categories
+        setCategories(FALLBACK_CATEGORIES);
+      });
+  }, []);
 
   const fetchProducts = () => {
     setIsLoading(true);
     const params = new URLSearchParams();
-    if (search) params.append('search', search);
-    if (selectedCategory) params.append('category', selectedCategory);
-    params.append('limit', '50');
+    if (search) params.append("search", search);
+    if (selectedCategory) params.append("category", selectedCategory);
+    params.append("limit", "50");
 
     apiClient<{ items: Product[] }>(`products?${params.toString()}`)
       .then((res) => setProducts(res.items || []))
-      .catch((err) => console.error('Failed to fetch products:', err))
+      .catch((err) => console.error("Failed to fetch products:", err))
       .finally(() => setIsLoading(false));
   };
 
@@ -30,36 +60,25 @@ export const ProductsPage: React.FC = () => {
     fetchProducts();
   }, [search, selectedCategory]);
 
-  const handleOpenEdit = (p: Product) => {
-    setEditingProduct(p);
-    setEditPrice(p.mrp);
-    setEditStatus(p.status);
+  const handleOpenCreate = () => {
+    setEditingProduct(null);
+    setIsModalOpen(true);
   };
 
-  const handleSaveEdit = async () => {
-    if (!editingProduct) return;
-    setIsSaving(true);
-    try {
-      await apiClient(`products/${editingProduct.id}`, {
-        method: 'PUT',
-        body: JSON.stringify({
-          mrp: Number(editPrice),
-          status: editStatus,
-        }),
-      });
-      setEditingProduct(null);
-      fetchProducts();
-    } catch (err: any) {
-      alert(`Save failed: ${err.message}`);
-    } finally {
-      setIsSaving(false);
-    }
+  const handleOpenEdit = (p: Product) => {
+    setEditingProduct(p);
+    setIsModalOpen(true);
   };
 
   const handleArchive = async (id: string, name: string) => {
-    if (!confirm(`Are you sure you want to safely archive "${name}"? Historical orders will be preserved.`)) return;
+    if (
+      !confirm(
+        `Are you sure you want to safely archive "${name}"? Historical orders will be preserved.`,
+      )
+    )
+      return;
     try {
-      await apiClient(`products/${id}`, { method: 'DELETE' });
+      await apiClient(`products/${id}`, { method: "DELETE" });
       fetchProducts();
     } catch (err: any) {
       alert(`Archive failed: ${err.message}`);
@@ -68,12 +87,19 @@ export const ProductsPage: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      {/* Page Header */}
+      {/* Page Header with New Product Button */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h2 className="font-serif text-2xl sm:text-3xl font-normal text-obsidian">Product Catalog</h2>
           <p className="text-xs text-ink-600 mt-0.5">Manage garment styles, verified fabrics, variants, and pricing</p>
         </div>
+        <button
+          onClick={handleOpenCreate}
+          className="btn-gold px-4 py-2.5 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-subtle shrink-0"
+        >
+          <Plus className="w-4 h-4" />
+          <span>New Product</span>
+        </button>
       </div>
 
       {/* Toolbar */}
@@ -91,17 +117,18 @@ export const ProductsPage: React.FC = () => {
             />
           </div>
 
-          {/* Category Filter */}
+          {/* Dynamic Category Filter */}
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
             className="text-xs bg-ivory border border-sandstone rounded-lg px-3 py-2 focus:outline-none focus:border-gold text-obsidian"
           >
             <option value="">All Categories</option>
-            <option value="round-neck">Round Neck Tees</option>
-            <option value="polo-collar">Polo & Collar Tees</option>
-            <option value="jacquard">Jacquard Knits</option>
-            <option value="printed">Printed & Tai Dai</option>
+            {categories.map((c) => (
+              <option key={c.id} value={c.slug}>
+                {c.name}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -119,6 +146,7 @@ export const ProductsPage: React.FC = () => {
                 <th className="py-3.5 pl-4">Garment</th>
                 <th className="py-3.5">Style (P.NO)</th>
                 <th className="py-3.5">Category</th>
+                <th className="py-3.5">Subcategory</th>
                 <th className="py-3.5">Fabric</th>
                 <th className="py-3.5">Price</th>
                 <th className="py-3.5">Variants</th>
@@ -129,19 +157,19 @@ export const ProductsPage: React.FC = () => {
             <tbody className="divide-y divide-sandstone/40">
               {isLoading ? (
                 <tr>
-                  <td colSpan={8} className="py-12 text-center text-xs text-ink-500">
+                  <td colSpan={9} className="py-12 text-center text-xs text-ink-500">
                     Loading catalog styles from authoritative database...
                   </td>
                 </tr>
               ) : products.length === 0 ? (
                 <tr>
-                  <td colSpan={8} className="py-12 text-center text-xs text-ink-500">
+                  <td colSpan={9} className="py-12 text-center text-xs text-ink-500">
                     No products found matching criteria.
                   </td>
                 </tr>
               ) : (
-                products.map((p) => {
-                  const mainImg = p.variants?.[0]?.images?.[0] || '/brand/tshirt-silhouette.svg';
+                products.map((p: any) => {
+                  const mainImg = p.variants?.[0]?.images?.[0] || "/brand/tshirt-silhouette.svg";
                   return (
                     <tr key={p.id} className="hover:bg-ivory/40 transition-colors">
                       <td className="py-3 pl-4">
@@ -160,12 +188,13 @@ export const ProductsPage: React.FC = () => {
                         </div>
                       </td>
                       <td className="py-3 font-mono font-bold text-obsidian">{p.pno}</td>
-                      <td className="py-3 text-ink-700">{p.categoryName}</td>
+                      <td className="py-3 text-ink-700 font-medium">{p.categoryName || p.category}</td>
+                      <td className="py-3 text-ink-600 font-medium">{p.subCategoryName || p.subCategory || "—"}</td>
                       <td className="py-3 text-ink-600">{p.fabric}</td>
-                      <td className="py-3 font-bold text-obsidian">₹{p.mrp.toLocaleString('en-IN')}</td>
+                      <td className="py-3 font-bold text-obsidian">₹{p.mrp?.toLocaleString("en-IN")}</td>
                       <td className="py-3">
                         <div className="flex items-center gap-1">
-                          {p.variants?.slice(0, 4).map((v) => (
+                          {p.variants?.slice(0, 4).map((v: any) => (
                             <span
                               key={v.id}
                               className="w-3.5 h-3.5 rounded-full border border-sandstone"
@@ -181,11 +210,11 @@ export const ProductsPage: React.FC = () => {
                       <td className="py-3">
                         <span
                           className={`inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
-                            p.status === 'active'
-                              ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
-                              : p.status === 'coming-soon'
-                              ? 'bg-obsidian text-gold border border-gold/40'
-                              : 'bg-sandstone/30 text-ink-600'
+                            p.status === "active"
+                              ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
+                              : p.status === "coming-soon"
+                              ? "bg-obsidian text-gold border border-gold/40"
+                              : "bg-sandstone/30 text-ink-600"
                           }`}
                         >
                           {p.status}
@@ -218,71 +247,14 @@ export const ProductsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Edit Modal */}
-      {editingProduct && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl border border-sandstone shadow-luxury p-6 max-w-md w-full space-y-4">
-            <div className="flex items-center justify-between pb-3 border-b border-sandstone">
-              <h3 className="font-serif text-xl font-normal text-obsidian">Edit Product Attributes</h3>
-              <button
-                onClick={() => setEditingProduct(null)}
-                className="p-1 text-ink-500 hover:text-obsidian rounded"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <div>
-              <p className="text-sm font-semibold text-obsidian">{editingProduct.name}</p>
-              <p className="text-xs text-ink-500 font-mono">P.NO: {editingProduct.pno}</p>
-            </div>
-
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-ink-700 mb-1">
-                MRP (₹)
-              </label>
-              <input
-                type="number"
-                value={editPrice}
-                onChange={(e) => setEditPrice(Number(e.target.value))}
-                className="w-full px-3 py-2 text-sm bg-ivory border border-sandstone rounded-lg focus:outline-none focus:border-gold font-bold"
-              />
-            </div>
-
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-ink-700 mb-1">
-                Status
-              </label>
-              <select
-                value={editStatus}
-                onChange={(e) => setEditStatus(e.target.value)}
-                className="w-full px-3 py-2 text-sm bg-ivory border border-sandstone rounded-lg focus:outline-none focus:border-gold"
-              >
-                <option value="active">Active (Available for purchase)</option>
-                <option value="coming-soon">Coming Soon</option>
-                <option value="archived">Archived</option>
-              </select>
-            </div>
-
-            <div className="flex justify-end gap-2 pt-3 border-t border-sandstone">
-              <button
-                onClick={() => setEditingProduct(null)}
-                className="px-4 py-2 text-xs font-semibold text-ink-700 hover:bg-sandstone/30 rounded-lg"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={handleSaveEdit}
-                disabled={isSaving}
-                className="btn-gold px-5 py-2 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5"
-              >
-                <Check className="w-3.5 h-3.5" />
-                <span>{isSaving ? 'Saving...' : 'Save Changes'}</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Comprehensive Create & Edit Modal */}
+      <ProductFormModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSuccess={fetchProducts}
+        product={editingProduct}
+        categories={categories}
+      />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { ReceiveStockModal } from "../components/inventory/ReceiveStockModal";
 import React, { useState, useEffect } from 'react';
 import { Search, Boxes, AlertTriangle, ArrowUpDown, History, Plus, Minus, X, Check } from 'lucide-react';
 import { apiClient } from '../api/client';
@@ -10,6 +11,7 @@ export const InventoryPage: React.FC = () => {
   const [search, setSearch] = useState('');
   const [lowStockOnly, setLowStockOnly] = useState(false);
   const [activeTab, setActiveTab] = useState<'levels' | 'movements'>('levels');
+  const [isReceiveModalOpen, setIsReceiveModalOpen] = useState(false);
 
   // Adjustment Modal State
   const [selectedStock, setSelectedStock] = useState<InventoryLevel | null>(null);
@@ -81,8 +83,16 @@ export const InventoryPage: React.FC = () => {
           </p>
         </div>
 
-        {/* Tab Switcher */}
-        <div className="flex items-center bg-white border border-sandstone rounded-lg p-1 shadow-subtle">
+        {/* Tab Switcher & Actions */}
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setIsReceiveModalOpen(true)}
+            className="btn-gold px-4 py-2 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-subtle shrink-0"
+          >
+            <Plus className="w-4 h-4" />
+            <span>Receive Shipment</span>
+          </button>
+          <div className="flex items-center bg-white border border-sandstone rounded-lg p-1 shadow-subtle">
           <button
             onClick={() => setActiveTab('levels')}
             className={`px-3.5 py-1.5 rounded-md text-xs font-semibold transition-all ${
@@ -360,6 +370,13 @@ export const InventoryPage: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Receive Stock Modal */}
+      <ReceiveStockModal
+        isOpen={isReceiveModalOpen}
+        onClose={() => setIsReceiveModalOpen(false)}
+        onSuccess={fetchInventory}
+      />
     </div>
   );
 };

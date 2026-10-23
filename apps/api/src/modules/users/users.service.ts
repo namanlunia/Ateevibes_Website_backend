@@ -13,7 +13,7 @@ export class UsersService {
         {
           id: 'admin-owner-default',
           email: 'admin@ateevibes.com',
-          name: 'Atelier Director',
+          name: 'Ateevibes Owner',
           role: Role.OWNER,
           isActive: true,
           createdAt: new Date(),

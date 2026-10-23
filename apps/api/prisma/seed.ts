@@ -24,7 +24,7 @@ async function main() {
     create: {
       email: "admin@ateevibes.com",
       passwordHash,
-      name: "Atelier Director",
+      name: "Ateevibes Owner",
       role: "OWNER",
       isActive: true,
     },

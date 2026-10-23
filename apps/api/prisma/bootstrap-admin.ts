@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 async function bootstrapAdmin() {
   const email = process.env.ADMIN_BOOTSTRAP_EMAIL || 'admin@ateevibes.com';
   const password = process.env.ADMIN_BOOTSTRAP_PASSWORD || 'AteevibesAdmin2026!';
-  const name = process.env.ADMIN_BOOTSTRAP_NAME || 'Atelier Director';
+  const name = process.env.ADMIN_BOOTSTRAP_NAME || 'Ateevibes Owner';
 
   console.log(`🔐 Bootstrapping initial owner admin account for: ${email}`);
 

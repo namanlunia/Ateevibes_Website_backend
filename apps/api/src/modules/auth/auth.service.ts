@@ -34,7 +34,7 @@ export class AuthService {
         return this.generateTokens({
           id: "admin-owner-default",
           email: "admin@ateevibes.com",
-          name: "Atelier Director",
+          name: "Ateevibes Owner",
           role: Role.OWNER,
         });
       }
@@ -201,7 +201,7 @@ export class AuthService {
         return {
           id: userId,
           email: "admin@ateevibes.com",
-          name: "Atelier Director",
+          name: "Ateevibes Owner",
           role: Role.OWNER,
         };
       }

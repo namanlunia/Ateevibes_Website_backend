@@ -4,6 +4,20 @@ import { ProductQueryDto } from './dto/product-query.dto';
 import { CreateProductDto, UpdateProductDto, CreateVariantDto } from './dto/create-product.dto';
 import { ProductStatus } from '@ateevibes/shared';
 
+/**
+ * DB- and client-side spellings differ: the Postgres enum value is `coming-soon`
+ * but the generated Prisma client expects the schema member `coming_soon`.
+ */
+function toPrismaStatus(input?: string): 'active' | 'coming_soon' | 'archived' {
+  if (input === 'coming-soon' || input === 'coming_soon') return 'coming_soon';
+  if (input === 'archived') return 'archived';
+  return 'active';
+}
+
+function fromPrismaStatus(input?: string): string {
+  return input === 'coming_soon' ? 'coming-soon' : input || 'active';
+}
+
 @Injectable()
 export class ProductsService {
   private readonly logger = new Logger(ProductsService.name);
@@ -217,7 +231,7 @@ export class ProductsService {
         mrp: dto.mrp,
         compareAtPrice: dto.compareAtPrice,
         priceConfirmed: dto.priceConfirmed ?? true,
-        status: (dto.status as any) || 'active',
+        status: toPrismaStatus(dto.status),
         badges: dto.badges || [],
         highlights: dto.highlights || [],
         description: dto.description,
@@ -258,7 +272,7 @@ export class ProductsService {
         ...(dto.description && { description: dto.description }),
         ...(dto.mrp !== undefined && { mrp: dto.mrp }),
         ...(dto.compareAtPrice !== undefined && { compareAtPrice: dto.compareAtPrice }),
-        ...(dto.status && { status: dto.status as any }),
+        ...(dto.status && { status: toPrismaStatus(dto.status) }),
         ...(dto.badges && { badges: dto.badges }),
         ...(dto.highlights && { highlights: dto.highlights }),
       },
@@ -299,7 +313,7 @@ export class ProductsService {
       mrp: Number(raw.mrp),
       compareAtPrice: raw.compareAtPrice ? Number(raw.compareAtPrice) : null,
       priceConfirmed: raw.priceConfirmed,
-      status: raw.status,
+      status: fromPrismaStatus(raw.status),
       badges: raw.badges || [],
       highlights: raw.highlights || [],
       description: raw.description,

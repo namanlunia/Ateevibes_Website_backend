@@ -5,6 +5,12 @@ import * as path from "path";
 
 const prisma = new PrismaClient();
 
+/** DB stores "coming-soon"; the Prisma client expects the schema member `coming_soon`. */
+const toPrismaStatus = (input?: string): "active" | "coming_soon" | "archived" =>
+  input === "coming-soon" || input === "coming_soon" ? "coming_soon"
+  : input === "archived" ? "archived"
+  : "active";
+
 async function main() {
   console.log("🌱 Starting Ateevibes Database Seed...");
 
@@ -177,7 +183,7 @@ async function main() {
         mrp: p.mrp || 999,
         compareAtPrice: p.compareAtPrice || null,
         priceConfirmed: p.priceConfirmed ?? true,
-        status: (p.status as any) || "active",
+        status: toPrismaStatus(p.status),
         badges: p.badges || [],
         highlights: p.highlights || [],
         description: p.description || "",
@@ -200,7 +206,7 @@ async function main() {
         mrp: p.mrp || 999,
         compareAtPrice: p.compareAtPrice || null,
         priceConfirmed: p.priceConfirmed ?? true,
-        status: (p.status as any) || "active",
+        status: toPrismaStatus(p.status),
         badges: p.badges || [],
         highlights: p.highlights || [],
         description: p.description || "",

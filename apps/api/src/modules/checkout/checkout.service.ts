@@ -12,6 +12,7 @@ import {
   PROMO_CODES,
   computeShippingAndTotals,
 } from "@ateevibes/shared";
+import { serializeOrder } from "../../common/serialize-order";
 
 @Injectable()
 export class CheckoutService {
@@ -238,7 +239,7 @@ export class CheckoutService {
       });
 
       this.logger.log(`Order ${order.id} created with atomic stock reservations for ${dto.items.length} items.`);
-      return order;
+      return serializeOrder(order);
     } catch (err: any) {
       this.logger.error(`Order creation failed for ${orderId}: ${err.message}. Rolling back stock reservation.`);
       await this.inventoryService.releaseReservationForCreatedOrder(orderId);

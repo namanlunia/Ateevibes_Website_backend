@@ -7,6 +7,7 @@ import {
 import { PrismaService } from '../../prisma/prisma.service';
 import { InventoryService } from '../inventory/inventory.service';
 import { OrderStatus } from '@ateevibes/shared';
+import { serializeOrder } from '../../common/serialize-order';
 
 @Injectable()
 export class OrdersService {
@@ -59,7 +60,7 @@ export class OrdersService {
     ]);
 
     return {
-      items,
+      items: items.map(serializeOrder),
       total,
       page,
       limit,
@@ -85,7 +86,7 @@ export class OrdersService {
       throw new NotFoundException(`Order with ID '${id}' not found.`);
     }
 
-    return order;
+    return serializeOrder(order);
   }
 
   /**
@@ -96,16 +97,23 @@ export class OrdersService {
 
     const cleanId = orderId.trim();
     const cleanContact = contact.trim().toLowerCase();
+    // Classify the contact: a phone candidate must be almost entirely digits (>=7 digits,
+    // at most +/spaces/dashes formatting left over). Otherwise it must be a full email.
+    // Never build wildcard conditions for mixed inputs (timestamped emails contain digits).
+    const phoneDigits = cleanContact.replace(/\D/g, '');
+    const nonDigitChars = cleanContact.length - phoneDigits.length;
+    const isPhoneContact = phoneDigits.length >= 7 && nonDigitChars <= 4;
+    const isEmailContact = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanContact);
+    if (!isPhoneContact && !isEmailContact) {
+      throw new NotFoundException('No matching order found for the provided details.');
+    }
 
     const order = await this.prisma.order.findFirst({
       where: {
         id: { equals: cleanId, mode: 'insensitive' },
-        shippingAddress: {
-          OR: [
-            { email: { equals: cleanContact, mode: 'insensitive' } },
-            { phone: { contains: cleanContact.replace(/\D/g, '') } },
-          ],
-        },
+        shippingAddress: isPhoneContact
+          ? { phone: { contains: phoneDigits } }
+          : { email: { equals: cleanContact, mode: 'insensitive' } },
       },
       select: {
         id: true,
@@ -142,13 +150,13 @@ export class OrdersService {
       throw new NotFoundException('No matching order found for the provided details.');
     }
 
-    return order;
+    return serializeOrder(order);
   }
 
   async findByCustomerEmail(email: string) {
     if (!this.prisma.isConnected) return [];
 
-    return this.prisma.order.findMany({
+    const orders = await this.prisma.order.findMany({
       where: {
         shippingAddress: { email: { equals: email.trim().toLowerCase(), mode: 'insensitive' } },
       },
@@ -158,6 +166,8 @@ export class OrdersService {
         shippingAddress: true,
       },
     });
+
+    return orders.map(serializeOrder);
   }
 
   async updateStatus(id: string, newStatus: OrderStatus, note?: string) {
@@ -203,6 +213,6 @@ export class OrdersService {
     });
 
     this.logger.log(`Order ${id} transitioned from ${order.status} to ${newStatus}.`);
-    return updated;
+    return serializeOrder(updated);
   }
 }

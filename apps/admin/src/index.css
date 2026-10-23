@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-black: #111111;
+  --deep-black: #191919;
+  --champagne-gold: #c9a45c;
+  --gold-light: #e2cb97;
+  --warm-ivory: #f5f1e8;
+  --warm-grey: #d8d2c7;
+  --secondary-text: #77736b;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--warm-ivory);
+  color: var(--primary-black);
+  font-family: 'Instrument Sans', Inter, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f1e8;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8d2c7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a45c;
+}
+
+.btn-gold {
+  background-color: #c9a45c;
+  color: #111111;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+.btn-gold:hover {
+  background-color: #e2cb97;
+  box-shadow: 0 4px 14px rgba(201, 164, 92, 0.3);
+}
+
+.btn-dark {
+  background-color: #111111;
+  color: #f5f1e8;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+.btn-dark:hover {
+  background-color: #191919;
+  border-color: #c9a45c;
+}

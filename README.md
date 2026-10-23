@@ -40,7 +40,7 @@ ateevibes-backend/
 ├── packages/
 │   └── shared/               # Shared TypeScript types, enums, DTO interfaces
 │
-├── docker-compose.yml        # PostgreSQL 16 & Redis 7 development stack
+├── docker-compose.yml        # PostgreSQL 16 development stack
 ├── package.json              # NPM workspaces orchestration
 └── tsconfig.base.json        # Unified TypeScript configuration
 ```
@@ -74,7 +74,7 @@ Customers can look up orders publicly using order ID and phone/email without req
 
 ### Prerequisites
 - Node.js 18+ (Node 20 LTS recommended)
-- Docker & Docker Compose (for local PostgreSQL & Redis)
+- Docker & Docker Compose (for local PostgreSQL)
 
 ### 1. Clone & Install Dependencies
 ```bash

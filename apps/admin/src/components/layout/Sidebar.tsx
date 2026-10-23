@@ -47,7 +47,7 @@ export const Sidebar: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
         }`}
       >
         {/* Top brand header */}
-        <div className="p-6 border-b border-sandstone/15">
+        <div className="px-4 py-6 border-b border-sandstone/15">
           <div className="flex items-center gap-3">
             <img src="/brand/logo.png" alt="Ateevibes" className="h-8 w-auto brightness-110" />
             <div>

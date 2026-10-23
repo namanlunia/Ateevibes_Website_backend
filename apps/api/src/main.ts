@@ -20,19 +20,44 @@ async function bootstrap() {
   app.setGlobalPrefix(apiPrefix);
 
   // CORS configuration
-  const rawOrigins = configService.get<string>('CORS_ORIGINS') || 'http://localhost:5173,http://localhost:5174';
-  const allowedOrigins = rawOrigins.split(',').map((o) => o.trim());
+  const isProduction = process.env.NODE_ENV === "production";
+  const rawOrigins = configService.get<string>("CORS_ORIGINS");
+  const allowedOrigins = rawOrigins
+    ? rawOrigins
+        .split(",")
+        .map((o) => o.trim())
+        .filter(Boolean)
+    : [];
+
+  const allowAllInDev = !isProduction && allowedOrigins.length === 0;
 
   app.enableCors({
     origin: (origin, callback) => {
       // Allow requests with no origin (like mobile apps, curl, server-to-server)
-      if (!origin || allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
+      if (!origin) {
+        return callback(null, true);
+      }
+      if (allowAllInDev) {
+        return callback(null, true);
+      }
+      const isAllowed =
+        allowedOrigins.includes(origin) ||
+        (() => {
+          try {
+            const { hostname } = new URL(origin);
+            return hostname === "vercel.app" || hostname.endsWith(".vercel.app");
+          } catch {
+            return origin.endsWith(".vercel.app");
+          }
+        })();
+
+      if (isAllowed) {
         callback(null, true);
       } else {
-        callback(null, true); // Dev-friendly fallback
+        callback(null, false);
       }
     },
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
     credentials: true,
   });
 

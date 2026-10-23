@@ -1,8 +1,9 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { PassportStrategy } from '@nestjs/passport';
-import { ExtractJwt, Strategy } from 'passport-jwt';
-import { ConfigService } from '@nestjs/config';
-import { PrismaService } from '../../prisma/prisma.service';
+import { Injectable, UnauthorizedException } from "@nestjs/common";
+import { PassportStrategy } from "@nestjs/passport";
+import { ExtractJwt, Strategy } from "passport-jwt";
+import { ConfigService } from "@nestjs/config";
+import { PrismaService } from "../../prisma/prisma.service";
+import { getRequiredSecret, DEFAULT_JWT_SECRET } from "../../config/required-env";
 
 export interface JwtPayload {
   sub: string;
@@ -20,13 +21,13 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       ignoreExpiration: false,
-      secretOrKey: configService.get<string>('JWT_SECRET') || 'ateevibes_jwt_super_secret_key_change_in_production_2026',
+      secretOrKey: getRequiredSecret(configService, "JWT_SECRET", DEFAULT_JWT_SECRET),
     });
   }
 
   async validate(payload: JwtPayload) {
     if (!payload || !payload.sub) {
-      throw new UnauthorizedException('Invalid authentication token.');
+      throw new UnauthorizedException("Invalid authentication token.");
     }
 
     if (this.prisma.isConnected) {
@@ -36,7 +37,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
       });
 
       if (!user || !user.isActive) {
-        throw new UnauthorizedException('User account not found or deactivated.');
+        throw new UnauthorizedException("User account not found or deactivated.");
       }
       return user;
     }

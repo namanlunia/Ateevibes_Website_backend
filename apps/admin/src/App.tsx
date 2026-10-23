@@ -24,7 +24,7 @@ const ProtectedLayout: React.FC<{ children: React.ReactNode; title: string }> = 
   if (isLoading) {
     return (
       <div className="min-h-screen bg-ivory flex items-center justify-center text-xs text-ink-600 font-medium">
-        Verifying Atelier Operations Credentials...
+        Verifying Ateevibes Operations Credentials...
       </div>
     );
   }

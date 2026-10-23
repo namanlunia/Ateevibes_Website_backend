@@ -52,7 +52,7 @@ export const Sidebar: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
             <img src="/brand/logo.png" alt="Ateevibes" className="h-8 w-auto brightness-110" />
             <div>
               <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-gold block">
-                Atelier Operations
+                Ateevibes Operations
               </span>
               <span className="text-xs font-serif italic text-sandstone/70">Surat, Gujarat</span>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Lock, Mail, ArrowRight, AlertCircle, ShieldCheck } from 'lucide-react';
+import { Lock, Mail, ArrowRight, AlertCircle, ShieldCheck, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 export const LoginPage: React.FC = () => {
@@ -9,6 +9,7 @@ export const LoginPage: React.FC = () => {
 
   const [email, setEmail] = useState('admin@ateevibes.com');
   const [password, setPassword] = useState('AteevibesAdmin2026!');
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -36,7 +37,7 @@ export const LoginPage: React.FC = () => {
         {/* Brand Header */}
         <div className="text-center mb-8">
           <img src="/brand/logo.png" alt="Ateevibes" className="h-10 mx-auto mb-3 brightness-110" />
-          <h2 className="font-serif text-2xl font-normal text-ivory">Atelier Operations Platform</h2>
+          <h2 className="font-serif text-2xl font-normal text-ivory">Ateevibes Operations Platform</h2>
           <p className="text-xs text-sandstone/70 mt-1 font-sans">
             Authoritative commerce, inventory & fulfilment management
           </p>
@@ -76,13 +77,22 @@ export const LoginPage: React.FC = () => {
             <div className="relative flex items-center bg-obsidian border border-sandstone/30 focus-within:border-gold rounded-lg px-3.5 py-2.5 transition-colors">
               <Lock className="w-4 h-4 text-gold mr-2.5 shrink-0" />
               <input
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 className="w-full bg-transparent text-sm text-ivory placeholder:text-sandstone/40 focus:outline-none"
                 placeholder="••••••••••••"
               />
+              <button
+                type="button"
+                onClick={() => setShowPassword((v) => !v)}
+                className="text-sandstone hover:text-gold transition-colors shrink-0 ml-2"
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+                title={showPassword ? 'Hide password' : 'Show password'}
+              >
+                {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              </button>
             </div>
           </div>
 

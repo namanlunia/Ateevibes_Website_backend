@@ -86,7 +86,7 @@ describe('CheckoutService Unit Tests', () => {
     expect(quote.grandTotal).toBe(2598 + 49);
   });
 
-  it('applies VIBE10 promo code with 10% discount', async () => {
+  it('applies ATEE10 promo code with 10% discount', async () => {
     const quote = await checkoutService.calculateQuote({
       items: [
         {
@@ -96,13 +96,13 @@ describe('CheckoutService Unit Tests', () => {
           quantity: 2, // 2598
         },
       ],
-      promoCode: 'VIBE10',
+      promoCode: 'ATEE10',
       isCod: false,
       isExpress: false,
     });
 
     expect(quote.discount).toBe(Math.round(2598 * 0.1));
-    expect(quote.promoApplied).toBe('VIBE10');
+    expect(quote.promoApplied).toBe('ATEE10');
     expect(quote.grandTotal).toBe(2598 - quote.discount);
   });
 });

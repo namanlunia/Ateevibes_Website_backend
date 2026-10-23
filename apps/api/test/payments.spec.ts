@@ -22,6 +22,13 @@ describe('PaymentsService Signature & Webhook Tests', () => {
         update: async () => ({ id: 'ATV-2026-PAY' }),
       },
       payment: {
+        findFirst: async ({ where }: any) => ({
+          id: 'pay-record-1',
+          orderId: where?.orderId,
+          gatewayOrderId: where?.gatewayOrderId,
+          amount: 129900,
+          order: { id: where?.orderId, grandTotal: 129900 },
+        }),
         updateMany: async () => ({ count: 1 }),
       },
     };

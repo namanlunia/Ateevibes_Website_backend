@@ -114,6 +114,7 @@ export const InventoryPage: React.FC = () => {
             Movement Audit
           </button>
         </div>
+        </div>
       </div>
 
       {activeTab === 'levels' && (

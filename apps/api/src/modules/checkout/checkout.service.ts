@@ -41,7 +41,9 @@ export class CheckoutService {
         },
       });
 
-      const productMap = new Map(products.map((p) => [p.id, p]));
+      const productMap = new Map<string, (typeof products)[number]>(
+        products.map((p) => [p.id, p] as const),
+      );
 
       for (const item of dto.items) {
         const product = productMap.get(item.productId);

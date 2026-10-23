@@ -1,0 +1,1961 @@
+[
+  {
+    "id": "prod-500",
+    "slug": "premium-matty-round-neck",
+    "pno": "500",
+    "name": "Premium Matty T-Shirt",
+    "category": "round-neck",
+    "categoryName": "Round Neck Tees",
+    "subCategory": "matty",
+    "subCategoryName": "Matty Round Neck",
+    "tags": [
+      "matty",
+      "best-seller",
+      "round-neck"
+    ],
+    "sleeve": "half",
+    "neck": "round",
+    "fabric": "Matty",
+    "printType": "Solid",
+    "mrp": 599,
+    "priceConfirmed": false,
+    "status": "active",
+    "badges": [
+      "Best Seller"
+    ],
+    "highlights": [
+      "Ultra soft matty fabric",
+      "Breathable",
+      "All-day comfort",
+      "Shape retention"
+    ],
+    "description": "A benchmark in daily luxury. Cut from an ultra-soft matty weave, this round-neck tee provides breezy ventilation and shape retention that lasts through every wear.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.7,
+    "reviewCount": 142,
+    "createdAt": "2025-10-10",
+    "popularity": 98,
+    "catalogPoster": "/catalog/pno-500.jpg",
+    "variants": [
+      {
+        "id": "var-500-black",
+        "colourName": "Black",
+        "colourSlug": "black",
+        "hex": "#111111",
+        "images": [
+          "/products/500/black.jpg"
+        ],
+        "stockBySize": {
+          "S": 12,
+          "M": 8,
+          "L": 4,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-500-white",
+        "colourName": "White",
+        "colourSlug": "white",
+        "hex": "#FFFFFF",
+        "images": [
+          "/products/500/white.jpg"
+        ],
+        "stockBySize": {
+          "S": 15,
+          "M": 10,
+          "L": 6,
+          "XL": 0
+        }
+      },
+      {
+        "id": "var-500-pastel-green",
+        "colourName": "Pastel Green",
+        "colourSlug": "pastel-green",
+        "hex": "#111111",
+        "images": [
+          "/products/500/pastel-green.jpg"
+        ],
+        "stockBySize": {
+          "S": 8,
+          "M": 3,
+          "L": 5,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-500-lavender",
+        "colourName": "Lavender",
+        "colourSlug": "lavender",
+        "hex": "#B9A5E8",
+        "images": [
+          "/products/500/lavender.jpg"
+        ],
+        "stockBySize": {
+          "S": 6,
+          "M": 12,
+          "L": 2,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-500-jalapeno-red",
+        "colourName": "Jalapeno Red",
+        "colourSlug": "jalapeno-red",
+        "hex": "#111111",
+        "images": [
+          "/products/500/jalapeno-red.jpg"
+        ],
+        "stockBySize": {
+          "S": 4,
+          "M": 9,
+          "L": 7,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-500-leather-brown",
+        "colourName": "Leather Brown",
+        "colourSlug": "leather-brown",
+        "hex": "#111111",
+        "images": [
+          "/products/500/leather-brown.jpg"
+        ],
+        "stockBySize": {
+          "S": 5,
+          "M": 6,
+          "L": 8,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-500-turquoise",
+        "colourName": "Turquoise",
+        "colourSlug": "turquoise",
+        "hex": "#1FB8A5",
+        "images": [
+          "/products/500/turquoise.jpg"
+        ],
+        "stockBySize": {
+          "S": 7,
+          "M": 8,
+          "L": 4,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-500-navy",
+        "colourName": "Navy",
+        "colourSlug": "navy",
+        "hex": "#1B2A4A",
+        "images": [
+          "/products/500/navy.jpg"
+        ],
+        "stockBySize": {
+          "S": 14,
+          "M": 16,
+          "L": 9,
+          "XL": 5
+        }
+      },
+      {
+        "id": "var-500-blue",
+        "colourName": "Blue",
+        "colourSlug": "blue",
+        "hex": "#4C79C6",
+        "images": [
+          "/products/500/blue.jpg"
+        ],
+        "stockBySize": {
+          "S": 6,
+          "M": 5,
+          "L": 3,
+          "XL": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-107",
+    "slug": "two-way-round-neck",
+    "pno": "107",
+    "name": "2-Way Round Neck T-Shirt",
+    "category": "round-neck",
+    "categoryName": "Round Neck Tees",
+    "subCategory": "2-way",
+    "subCategoryName": "2-Way Round Neck",
+    "tags": [
+      "2-way",
+      "stretch",
+      "round-neck"
+    ],
+    "sleeve": "half",
+    "neck": "round",
+    "fabric": "2-Way",
+    "printType": "Solid",
+    "mrp": 599,
+    "priceConfirmed": false,
+    "status": "active",
+    "badges": [
+      "New"
+    ],
+    "highlights": [
+      "2-way stretch fabric",
+      "Soft and breathable",
+      "Durable",
+      "Perfect fit"
+    ],
+    "description": "Engineered with responsive two-way stretch tension that glides effortlessly with your motion. Breathable and soft against the skin, delivering maximum comfort from morning to night.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.6,
+    "reviewCount": 88,
+    "createdAt": "2025-10-18",
+    "popularity": 84,
+    "catalogPoster": "/catalog/pno-107.jpg",
+    "variants": [
+      {
+        "id": "var-107-black",
+        "colourName": "Black",
+        "colourSlug": "black",
+        "hex": "#111111",
+        "images": [
+          "/products/107/black.jpg"
+        ],
+        "stockBySize": {
+          "S": 10,
+          "M": 12,
+          "L": 8,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-107-bottle-green",
+        "colourName": "Bottle Green",
+        "colourSlug": "bottle-green",
+        "hex": "#111111",
+        "images": [
+          "/products/107/bottle-green.jpg"
+        ],
+        "stockBySize": {
+          "S": 8,
+          "M": 6,
+          "L": 4,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-107-wine",
+        "colourName": "Wine",
+        "colourSlug": "wine",
+        "hex": "#5A1F2E",
+        "images": [
+          "/products/107/wine.jpg"
+        ],
+        "stockBySize": {
+          "S": 5,
+          "M": 7,
+          "L": 5,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-107-rust",
+        "colourName": "Rust",
+        "colourSlug": "rust",
+        "hex": "#9C3B1E",
+        "images": [
+          "/products/107/rust.jpg"
+        ],
+        "stockBySize": {
+          "S": 6,
+          "M": 4,
+          "L": 2,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-107-off-white",
+        "colourName": "Off-White",
+        "colourSlug": "off-white",
+        "hex": "#111111",
+        "images": [
+          "/products/107/off-white.jpg"
+        ],
+        "stockBySize": {
+          "S": 9,
+          "M": 11,
+          "L": 7,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-107-grey",
+        "colourName": "Grey",
+        "colourSlug": "grey",
+        "hex": "#6F6BA6",
+        "images": [
+          "/products/107/grey.jpg"
+        ],
+        "stockBySize": {
+          "S": 4,
+          "M": 8,
+          "L": 3,
+          "XL": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-600",
+    "slug": "imported-tencil-round-neck",
+    "pno": "600",
+    "name": "Imported Tencil Round Neck T-Shirt",
+    "category": "round-neck",
+    "categoryName": "Round Neck Tees",
+    "subCategory": "tencil",
+    "subCategoryName": "Tencil Round Neck",
+    "tags": [
+      "tencil",
+      "premium",
+      "round-neck"
+    ],
+    "sleeve": "half",
+    "neck": "round",
+    "fabric": "Tencil",
+    "printType": "Solid",
+    "mrp": 599,
+    "priceConfirmed": false,
+    "status": "active",
+    "badges": [],
+    "highlights": [
+      "Premium tencil fabric",
+      "Soft and breathable",
+      "Lightweight",
+      "Shape retention"
+    ],
+    "description": "Immaculate drape meeting lightweight breathability. Specially woven imported tencil yarns provide a fluid texture with remarkable cooling comfort.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.5,
+    "reviewCount": 64,
+    "createdAt": "2025-09-28",
+    "popularity": 76,
+    "catalogPoster": "/catalog/pno-600.jpg",
+    "variants": [
+      {
+        "id": "var-600-black",
+        "colourName": "Black",
+        "colourSlug": "black",
+        "hex": "#111111",
+        "images": [
+          "/products/600/black.jpg"
+        ],
+        "stockBySize": {
+          "M": 10,
+          "L": 6,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-600-bottle-green",
+        "colourName": "Bottle Green",
+        "colourSlug": "bottle-green",
+        "hex": "#111111",
+        "images": [
+          "/products/600/bottle-green.jpg"
+        ],
+        "stockBySize": {
+          "M": 8,
+          "L": 4,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-600-rust",
+        "colourName": "Rust",
+        "colourSlug": "rust",
+        "hex": "#9C3B1E",
+        "images": [
+          "/products/600/rust.jpg"
+        ],
+        "stockBySize": {
+          "M": 6,
+          "L": 5,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-600-off-white",
+        "colourName": "Off-White",
+        "colourSlug": "off-white",
+        "hex": "#111111",
+        "images": [
+          "/products/600/off-white.jpg"
+        ],
+        "stockBySize": {
+          "M": 9,
+          "L": 8,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-600-grey",
+        "colourName": "Grey",
+        "colourSlug": "grey",
+        "hex": "#6F6BA6",
+        "images": [
+          "/products/600/grey.jpg"
+        ],
+        "stockBySize": {
+          "M": 5,
+          "L": 3,
+          "XL": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-501",
+    "slug": "premium-waffle-round-neck",
+    "pno": "501",
+    "name": "Premium Waffle Round Neck T-Shirt",
+    "category": "round-neck",
+    "categoryName": "Round Neck Tees",
+    "subCategory": "waffle",
+    "subCategoryName": "Waffle Round Neck",
+    "tags": [
+      "waffle",
+      "best-seller",
+      "round-neck"
+    ],
+    "sleeve": "half",
+    "neck": "round",
+    "fabric": "Waffle",
+    "printType": "Solid",
+    "mrp": 499,
+    "priceConfirmed": true,
+    "status": "active",
+    "badges": [
+      "Best Seller"
+    ],
+    "highlights": [
+      "Waffle texture",
+      "Breathable and comfortable",
+      "Trendy look",
+      "All-day comfort"
+    ],
+    "description": "Dimensional micro-waffle grid knit that traps airflow while lending deep tactile substance. The definitive casual tee with elevated presence.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.8,
+    "reviewCount": 210,
+    "createdAt": "2025-08-14",
+    "popularity": 99,
+    "catalogPoster": "/catalog/pno-501.jpg",
+    "variants": [
+      {
+        "id": "var-501-black",
+        "colourName": "Black",
+        "colourSlug": "black",
+        "hex": "#111111",
+        "images": [
+          "/products/501/black.jpg"
+        ],
+        "stockBySize": {
+          "M": 14,
+          "L": 12,
+          "XL": 5
+        }
+      },
+      {
+        "id": "var-501-beige",
+        "colourName": "Beige",
+        "colourSlug": "beige",
+        "hex": "#D9C7A5",
+        "images": [
+          "/products/501/beige.jpg"
+        ],
+        "stockBySize": {
+          "M": 11,
+          "L": 9,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-501-brown",
+        "colourName": "Brown",
+        "colourSlug": "brown",
+        "hex": "#4A2C1F",
+        "images": [
+          "/products/501/brown.jpg"
+        ],
+        "stockBySize": {
+          "M": 7,
+          "L": 5,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-501-aqua",
+        "colourName": "Aqua",
+        "colourSlug": "aqua",
+        "hex": "#6FB5BE",
+        "images": [
+          "/products/501/aqua.jpg"
+        ],
+        "stockBySize": {
+          "M": 6,
+          "L": 4,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-501-white",
+        "colourName": "White",
+        "colourSlug": "white",
+        "hex": "#FFFFFF",
+        "images": [
+          "/products/501/white.jpg"
+        ],
+        "stockBySize": {
+          "M": 15,
+          "L": 10,
+          "XL": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-1400",
+    "slug": "premium-matty-polo",
+    "pno": "1400",
+    "name": "Premium Matty Polo T-Shirt",
+    "category": "polo-collar",
+    "categoryName": "Polo & Collar Tees",
+    "subCategory": "matty-polo",
+    "subCategoryName": "Matty Polo",
+    "tags": [
+      "polo",
+      "matty",
+      "collar"
+    ],
+    "sleeve": "half",
+    "neck": "polo",
+    "fabric": "Matty",
+    "printType": "Solid",
+    "mrp": 599,
+    "priceConfirmed": true,
+    "status": "active",
+    "badges": [
+      "New"
+    ],
+    "highlights": [
+      "Ultra soft matty fabric",
+      "Breathable",
+      "All-day comfort",
+      "Perfect fit"
+    ],
+    "description": "Clean lines meet timeless collar architecture. Crafted from breathable matty knit with a structured collar stand that holds its form.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.6,
+    "reviewCount": 95,
+    "createdAt": "2025-10-01",
+    "popularity": 88,
+    "catalogPoster": "/catalog/pno-1400.jpg",
+    "variants": [
+      {
+        "id": "var-1400-white",
+        "colourName": "White",
+        "colourSlug": "white",
+        "hex": "#FFFFFF",
+        "images": [
+          "/products/1400/white.jpg"
+        ],
+        "stockBySize": {
+          "M": 12,
+          "L": 8,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-1400-navy",
+        "colourName": "Navy",
+        "colourSlug": "navy",
+        "hex": "#1B2A4A",
+        "images": [
+          "/products/1400/navy.jpg"
+        ],
+        "stockBySize": {
+          "M": 15,
+          "L": 11,
+          "XL": 5
+        }
+      },
+      {
+        "id": "var-1400-jalapeno-red",
+        "colourName": "Jalapeno Red",
+        "colourSlug": "jalapeno-red",
+        "hex": "#111111",
+        "images": [
+          "/products/1400/jalapeno-red.jpg"
+        ],
+        "stockBySize": {
+          "M": 7,
+          "L": 5,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-1400-leather-brown",
+        "colourName": "Leather Brown",
+        "colourSlug": "leather-brown",
+        "hex": "#111111",
+        "images": [
+          "/products/1400/leather-brown.jpg"
+        ],
+        "stockBySize": {
+          "M": 6,
+          "L": 4,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-1400-black",
+        "colourName": "Black",
+        "colourSlug": "black",
+        "hex": "#111111",
+        "images": [
+          "/products/1400/black.jpg"
+        ],
+        "stockBySize": {
+          "M": 14,
+          "L": 10,
+          "XL": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-105",
+    "slug": "jacquard-half-sleeve-polo",
+    "pno": "105",
+    "name": "Jacquard Half Sleeve Polo T-Shirt",
+    "category": "polo-collar",
+    "categoryName": "Polo & Collar Tees",
+    "subCategory": "jacquard-polo",
+    "subCategoryName": "Jacquard Polo",
+    "tags": [
+      "polo",
+      "jacquard",
+      "collar",
+      "best-seller"
+    ],
+    "sleeve": "half",
+    "neck": "polo",
+    "fabric": "Jacquard",
+    "printType": "Solid",
+    "mrp": 699,
+    "priceConfirmed": true,
+    "status": "active",
+    "badges": [
+      "Best Seller"
+    ],
+    "highlights": [
+      "Jacquard weave",
+      "Breathable",
+      "Soft",
+      "All-day comfort",
+      "Perfect for every occasion"
+    ],
+    "description": "Fine-tuned geometric micro-relief jacquard knit with a tailored polo collar. Transitions smoothly from afternoon meetings to weekend gatherings.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.8,
+    "reviewCount": 167,
+    "createdAt": "2025-09-12",
+    "popularity": 95,
+    "catalogPoster": "/catalog/pno-105.jpg",
+    "variants": [
+      {
+        "id": "var-105-black",
+        "colourName": "Black",
+        "colourSlug": "black",
+        "hex": "#111111",
+        "images": [
+          "/products/105/black.jpg"
+        ],
+        "stockBySize": {
+          "S": 10,
+          "M": 8,
+          "L": 6,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-105-mint-green",
+        "colourName": "Mint Green",
+        "colourSlug": "mint-green",
+        "hex": "#111111",
+        "images": [
+          "/products/105/mint-green.jpg"
+        ],
+        "stockBySize": {
+          "S": 6,
+          "M": 4,
+          "L": 3,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-105-rust",
+        "colourName": "Rust",
+        "colourSlug": "rust",
+        "hex": "#9C3B1E",
+        "images": [
+          "/products/105/rust.jpg"
+        ],
+        "stockBySize": {
+          "S": 8,
+          "M": 6,
+          "L": 5,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-105-charcoal",
+        "colourName": "Charcoal",
+        "colourSlug": "charcoal",
+        "hex": "#2F3338",
+        "images": [
+          "/products/105/charcoal.jpg"
+        ],
+        "stockBySize": {
+          "S": 9,
+          "M": 11,
+          "L": 7,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-105-lemon",
+        "colourName": "Lemon",
+        "colourSlug": "lemon",
+        "hex": "#D9A62A",
+        "images": [
+          "/products/105/lemon.jpg"
+        ],
+        "stockBySize": {
+          "S": 5,
+          "M": 5,
+          "L": 2,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-105-white",
+        "colourName": "White",
+        "colourSlug": "white",
+        "hex": "#FFFFFF",
+        "images": [
+          "/products/105/white.jpg"
+        ],
+        "stockBySize": {
+          "S": 12,
+          "M": 14,
+          "L": 8,
+          "XL": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-1401",
+    "slug": "waffle-polo",
+    "pno": "1401",
+    "name": "Waffle Polo T-Shirt",
+    "category": "polo-collar",
+    "categoryName": "Polo & Collar Tees",
+    "subCategory": "waffle-polo",
+    "subCategoryName": "Waffle Polo",
+    "tags": [
+      "polo",
+      "waffle",
+      "coming-soon"
+    ],
+    "sleeve": "half",
+    "neck": "polo",
+    "fabric": "Waffle",
+    "printType": "Solid",
+    "mrp": 699,
+    "priceConfirmed": true,
+    "status": "coming-soon",
+    "badges": [
+      "Coming Soon"
+    ],
+    "highlights": [
+      "Waffle texture",
+      "Modern fit",
+      "Breathable",
+      "All-day comfort"
+    ],
+    "description": "Upcoming drop: our beloved tactile waffle texture engineered into a refined collar polo. Register below to be notified the moment stock lands.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "createdAt": "2025-10-20",
+    "popularity": 50,
+    "catalogPoster": "/catalog/pno-1401.jpg",
+    "variants": [
+      {
+        "id": "var-1401-coming-soon",
+        "colourName": "Colours TBD",
+        "colourSlug": "coming-soon",
+        "hex": "#D9C7A5",
+        "images": [
+          "/products/1401/coming-soon.jpg"
+        ],
+        "stockBySize": {
+          "M": 0,
+          "L": 0,
+          "XL": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-1700-a",
+    "slug": "premium-printed-collar-stripe-gradient",
+    "pno": "1700",
+    "name": "Premium Printed Collar T-Shirt, Stripe Gradient",
+    "category": "polo-collar",
+    "categoryName": "Polo & Collar Tees",
+    "subCategory": "printed-collar",
+    "subCategoryName": "Printed Collar",
+    "tags": [
+      "printed-collar",
+      "polo",
+      "stripe",
+      "new-arrival"
+    ],
+    "sleeve": "half",
+    "neck": "polo",
+    "fabric": "Printed",
+    "printType": "Stripe",
+    "mrp": 799,
+    "priceConfirmed": true,
+    "status": "active",
+    "badges": [
+      "New"
+    ],
+    "highlights": [
+      "Premium fabric",
+      "Skin friendly",
+      "Bright and long-lasting print",
+      "Perfect fit"
+    ],
+    "description": "Subtle chromatic ombre stripes cascading across the collar trim. Woven with skin-friendly cotton-blend yarns providing lasting vibrancy.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.7,
+    "reviewCount": 79,
+    "createdAt": "2025-10-15",
+    "popularity": 91,
+    "catalogPoster": "/catalog/pno-1700-stripes.jpg",
+    "variants": [
+      {
+        "id": "var-1700-a-rose-pink",
+        "colourName": "Rose Pink",
+        "colourSlug": "rose-pink",
+        "hex": "#111111",
+        "patternImage": "/products/1700-A/swatch-rose-pink.jpg",
+        "images": [
+          "/products/1700-A/rose-pink.jpg"
+        ],
+        "stockBySize": {
+          "M": 8,
+          "L": 6,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-1700-a-sky-blue",
+        "colourName": "Sky Blue",
+        "colourSlug": "sky-blue",
+        "hex": "#111111",
+        "patternImage": "/products/1700-A/swatch-sky-blue.jpg",
+        "images": [
+          "/products/1700-A/sky-blue.jpg"
+        ],
+        "stockBySize": {
+          "M": 10,
+          "L": 7,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-1700-a-lilac-grey",
+        "colourName": "Lilac Grey",
+        "colourSlug": "lilac-grey",
+        "hex": "#111111",
+        "patternImage": "/products/1700-A/swatch-lilac-grey.jpg",
+        "images": [
+          "/products/1700-A/lilac-grey.jpg"
+        ],
+        "stockBySize": {
+          "M": 5,
+          "L": 3,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-1700-a-sand-beige",
+        "colourName": "Sand Beige",
+        "colourSlug": "sand-beige",
+        "hex": "#111111",
+        "patternImage": "/products/1700-A/swatch-sand-beige.jpg",
+        "images": [
+          "/products/1700-A/sand-beige.jpg"
+        ],
+        "stockBySize": {
+          "M": 9,
+          "L": 6,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-1700-a-sage-green",
+        "colourName": "Sage Green",
+        "colourSlug": "sage-green",
+        "hex": "#111111",
+        "patternImage": "/products/1700-A/swatch-sage-green.jpg",
+        "images": [
+          "/products/1700-A/sage-green.jpg"
+        ],
+        "stockBySize": {
+          "M": 7,
+          "L": 8,
+          "XL": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-1700-b",
+    "slug": "premium-printed-collar-abstract",
+    "pno": "1700",
+    "name": "Premium Printed Collar T-Shirt, Abstract",
+    "category": "polo-collar",
+    "categoryName": "Polo & Collar Tees",
+    "subCategory": "printed-collar",
+    "subCategoryName": "Printed Collar",
+    "tags": [
+      "printed-collar",
+      "polo",
+      "abstract"
+    ],
+    "sleeve": "half",
+    "neck": "polo",
+    "fabric": "Printed",
+    "printType": "Abstract",
+    "mrp": 799,
+    "priceConfirmed": true,
+    "status": "active",
+    "badges": [],
+    "highlights": [
+      "Premium fabric",
+      "Skin friendly",
+      "Bright and long-lasting print",
+      "Perfect fit"
+    ],
+    "description": "Abstract geometric placements delicately integrated onto the collar and chest line. Expressive yet understated for effortless versatility.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.6,
+    "reviewCount": 52,
+    "createdAt": "2025-10-12",
+    "popularity": 82,
+    "catalogPoster": "/catalog/pno-1700-abstract.jpg",
+    "variants": [
+      {
+        "id": "var-1700-b-d1",
+        "colourName": "Design 01",
+        "colourSlug": "design-01",
+        "hex": "#A8C4A2",
+        "patternImage": "/products/1700-B/swatch-design-01.jpg",
+        "images": [
+          "/products/1700-B/design-01.jpg"
+        ],
+        "stockBySize": {
+          "M": 7,
+          "L": 5,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-1700-b-d2",
+        "colourName": "Design 02",
+        "colourSlug": "design-02",
+        "hex": "#7DB6E3",
+        "patternImage": "/products/1700-B/swatch-design-02.jpg",
+        "images": [
+          "/products/1700-B/design-02.jpg"
+        ],
+        "stockBySize": {
+          "M": 8,
+          "L": 6,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-1700-b-d3",
+        "colourName": "Design 03",
+        "colourSlug": "design-03",
+        "hex": "#D890A8",
+        "patternImage": "/products/1700-B/swatch-design-03.jpg",
+        "images": [
+          "/products/1700-B/design-03.jpg"
+        ],
+        "stockBySize": {
+          "M": 6,
+          "L": 4,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-1700-b-d4",
+        "colourName": "Design 04",
+        "colourSlug": "design-04",
+        "hex": "#D2B48C",
+        "patternImage": "/products/1700-B/swatch-design-04.jpg",
+        "images": [
+          "/products/1700-B/design-04.jpg"
+        ],
+        "stockBySize": {
+          "M": 5,
+          "L": 7,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-1700-b-d5",
+        "colourName": "Design 05",
+        "colourSlug": "design-05",
+        "hex": "#8FD1B0",
+        "patternImage": "/products/1700-B/swatch-design-05.jpg",
+        "images": [
+          "/products/1700-B/design-05.jpg"
+        ],
+        "stockBySize": {
+          "M": 9,
+          "L": 5,
+          "XL": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-711",
+    "slug": "jacquard-half-sleeve",
+    "pno": "711",
+    "name": "Jacquard Half Sleeve T-Shirt",
+    "category": "jacquard",
+    "categoryName": "Jacquard Tees",
+    "subCategory": "half-sleeve",
+    "subCategoryName": "Jacquard Half Sleeve",
+    "tags": [
+      "jacquard",
+      "round-neck"
+    ],
+    "sleeve": "half",
+    "neck": "round",
+    "fabric": "Jacquard",
+    "printType": "Solid",
+    "mrp": 599,
+    "priceConfirmed": true,
+    "status": "active",
+    "badges": [],
+    "highlights": [
+      "Jacquard weave",
+      "Breathable",
+      "Soft",
+      "All-day comfort"
+    ],
+    "description": "Precision-loomed textured knit in a clean round-neck profile. Breathable weave lets air circulate freely, staying crisp throughout warm days.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.5,
+    "reviewCount": 68,
+    "createdAt": "2025-08-29",
+    "popularity": 79,
+    "catalogPoster": "/catalog/pno-711.jpg",
+    "variants": [
+      {
+        "id": "var-711-black",
+        "colourName": "Black",
+        "colourSlug": "black",
+        "hex": "#111111",
+        "images": [
+          "/products/711/black.jpg"
+        ],
+        "stockBySize": {
+          "S": 9,
+          "M": 7,
+          "L": 5,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-711-mint-green",
+        "colourName": "Mint Green",
+        "colourSlug": "mint-green",
+        "hex": "#111111",
+        "images": [
+          "/products/711/mint-green.jpg"
+        ],
+        "stockBySize": {
+          "S": 5,
+          "M": 4,
+          "L": 2,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-711-rust",
+        "colourName": "Rust",
+        "colourSlug": "rust",
+        "hex": "#9C3B1E",
+        "images": [
+          "/products/711/rust.jpg"
+        ],
+        "stockBySize": {
+          "S": 7,
+          "M": 6,
+          "L": 4,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-711-charcoal",
+        "colourName": "Charcoal",
+        "colourSlug": "charcoal",
+        "hex": "#2F3338",
+        "images": [
+          "/products/711/charcoal.jpg"
+        ],
+        "stockBySize": {
+          "S": 11,
+          "M": 9,
+          "L": 6,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-711-lemon",
+        "colourName": "Lemon",
+        "colourSlug": "lemon",
+        "hex": "#D9A62A",
+        "images": [
+          "/products/711/lemon.jpg"
+        ],
+        "stockBySize": {
+          "S": 4,
+          "M": 5,
+          "L": 2,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-711-white",
+        "colourName": "White",
+        "colourSlug": "white",
+        "hex": "#FFFFFF",
+        "images": [
+          "/products/711/white.jpg"
+        ],
+        "stockBySize": {
+          "S": 10,
+          "M": 12,
+          "L": 8,
+          "XL": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-1005",
+    "slug": "jacquard-full-sleeve",
+    "pno": "1005",
+    "name": "Jacquard Full Sleeve T-Shirt",
+    "category": "jacquard",
+    "categoryName": "Jacquard Tees",
+    "subCategory": "full-sleeve",
+    "subCategoryName": "Jacquard Full Sleeve",
+    "tags": [
+      "jacquard",
+      "full-sleeve",
+      "round-neck"
+    ],
+    "sleeve": "full",
+    "neck": "round",
+    "fabric": "Jacquard",
+    "printType": "Solid",
+    "mrp": 799,
+    "priceConfirmed": false,
+    "status": "active",
+    "badges": [
+      "New"
+    ],
+    "highlights": [
+      "Jacquard weave",
+      "Breathable",
+      "Soft",
+      "Shape retention"
+    ],
+    "description": "Extended wrist cuff coverage and full-length sleeve contours woven in our proprietary jacquard knit. Structured drape that layers cleanly under jackets or stands proudly solo.",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.7,
+    "reviewCount": 91,
+    "createdAt": "2025-10-14",
+    "popularity": 87,
+    "catalogPoster": "/catalog/pno-1005.jpg",
+    "variants": [
+      {
+        "id": "var-1005-rust",
+        "colourName": "Rust",
+        "colourSlug": "rust",
+        "hex": "#9C3B1E",
+        "images": [
+          "/products/1005/rust.jpg"
+        ],
+        "stockBySize": {
+          "S": 8,
+          "M": 7,
+          "L": 4,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-1005-mint-green",
+        "colourName": "Mint Green",
+        "colourSlug": "mint-green",
+        "hex": "#111111",
+        "images": [
+          "/products/1005/mint-green.jpg"
+        ],
+        "stockBySize": {
+          "S": 6,
+          "M": 5,
+          "L": 3,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-1005-black",
+        "colourName": "Black",
+        "colourSlug": "black",
+        "hex": "#111111",
+        "images": [
+          "/products/1005/black.jpg"
+        ],
+        "stockBySize": {
+          "S": 14,
+          "M": 12,
+          "L": 8,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-1005-charcoal",
+        "colourName": "Charcoal",
+        "colourSlug": "charcoal",
+        "hex": "#2F3338",
+        "images": [
+          "/products/1005/charcoal.jpg"
+        ],
+        "stockBySize": {
+          "S": 10,
+          "M": 8,
+          "L": 6,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-1005-lemon",
+        "colourName": "Lemon",
+        "colourSlug": "lemon",
+        "hex": "#D9A62A",
+        "images": [
+          "/products/1005/lemon.jpg"
+        ],
+        "stockBySize": {
+          "S": 5,
+          "M": 4,
+          "L": 2,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-1005-white",
+        "colourName": "White",
+        "colourSlug": "white",
+        "hex": "#FFFFFF",
+        "images": [
+          "/products/1005/white.jpg"
+        ],
+        "stockBySize": {
+          "S": 12,
+          "M": 11,
+          "L": 7,
+          "XL": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-701",
+    "slug": "royal-print-jacquard-half-sleeve",
+    "pno": "701",
+    "name": "Royal Print Jacquard Half Sleeve T-Shirt",
+    "category": "jacquard",
+    "categoryName": "Jacquard Tees",
+    "subCategory": "royal-print-half-sleeve",
+    "subCategoryName": "Royal Print Jacquard Half Sleeve",
+    "tags": [
+      "jacquard",
+      "royal-print",
+      "round-neck"
+    ],
+    "sleeve": "half",
+    "neck": "round",
+    "fabric": "China Jacquard",
+    "printType": "Royal Print",
+    "mrp": 599,
+    "priceConfirmed": true,
+    "status": "active",
+    "badges": [],
+    "highlights": [
+      "China jacquard fabric",
+      "Premium quality",
+      "Soft",
+      "Breathable",
+      "Lightweight",
+      "Durable",
+      "Stretchable"
+    ],
+    "description": "Crafted from lustrous China jacquard fabric featuring rich dimensional textures. Soft, durable, and naturally stretchable with an opulent tactile finish.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.6,
+    "reviewCount": 114,
+    "createdAt": "2025-09-19",
+    "popularity": 89,
+    "catalogPoster": "/catalog/pno-701.jpg",
+    "variants": [
+      {
+        "id": "var-701-green",
+        "colourName": "Green",
+        "colourSlug": "green",
+        "hex": "#1F4D3A",
+        "patternImage": "/products/701/swatch-green.jpg",
+        "images": [
+          "/products/701/green.jpg"
+        ],
+        "stockBySize": {
+          "M": 10,
+          "L": 8,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-701-black",
+        "colourName": "Black",
+        "colourSlug": "black",
+        "hex": "#111111",
+        "patternImage": "/products/701/swatch-black.jpg",
+        "images": [
+          "/products/701/black.jpg"
+        ],
+        "stockBySize": {
+          "M": 15,
+          "L": 11,
+          "XL": 5
+        }
+      },
+      {
+        "id": "var-701-lavender",
+        "colourName": "Lavender",
+        "colourSlug": "lavender",
+        "hex": "#B9A5E8",
+        "patternImage": "/products/701/swatch-lavender.jpg",
+        "images": [
+          "/products/701/lavender.jpg"
+        ],
+        "stockBySize": {
+          "M": 6,
+          "L": 4,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-701-grey",
+        "colourName": "Grey",
+        "colourSlug": "grey",
+        "hex": "#111111",
+        "patternImage": "/products/701/swatch-grey.jpg",
+        "images": [
+          "/products/701/grey.jpg"
+        ],
+        "stockBySize": {
+          "M": 7,
+          "L": 5,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-701-chocolate",
+        "colourName": "Chocolate",
+        "colourSlug": "chocolate",
+        "hex": "#8A5A3C",
+        "patternImage": "/products/701/swatch-chocolate.jpg",
+        "images": [
+          "/products/701/chocolate.jpg"
+        ],
+        "stockBySize": {
+          "M": 8,
+          "L": 6,
+          "XL": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-1007",
+    "slug": "royal-print-jacquard-full-sleeve",
+    "pno": "1007",
+    "name": "Royal Print Jacquard Full Sleeve T-Shirt",
+    "category": "jacquard",
+    "categoryName": "Jacquard Tees",
+    "subCategory": "royal-print-full-sleeve",
+    "subCategoryName": "Royal Print Jacquard Full Sleeve",
+    "tags": [
+      "jacquard",
+      "royal-print",
+      "full-sleeve",
+      "best-seller",
+      "signature"
+    ],
+    "sleeve": "full",
+    "neck": "round",
+    "fabric": "China Jacquard",
+    "printType": "Royal Print",
+    "mrp": 799,
+    "priceConfirmed": true,
+    "status": "active",
+    "badges": [
+      "Best Seller"
+    ],
+    "highlights": [
+      "China jacquard fabric",
+      "Breathable",
+      "Lightweight",
+      "Durable",
+      "Stretchable",
+      "Modern fit"
+    ],
+    "description": "The flagship Ateevibes icon. Engineered in China jacquard knit with our signature regal print, contoured full sleeves, and remarkable four-season flexibility.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.9,
+    "reviewCount": 312,
+    "createdAt": "2025-08-01",
+    "popularity": 100,
+    "catalogPoster": "/catalog/pno-1007.jpg",
+    "variants": [
+      {
+        "id": "var-1007-green",
+        "colourName": "Green",
+        "colourSlug": "green",
+        "hex": "#1F4D3A",
+        "patternImage": "/products/1007/swatch-green.jpg",
+        "images": [
+          "/products/1007/green.jpg"
+        ],
+        "stockBySize": {
+          "M": 18,
+          "L": 14,
+          "XL": 6
+        }
+      },
+      {
+        "id": "var-1007-black",
+        "colourName": "Black",
+        "colourSlug": "black",
+        "hex": "#111111",
+        "patternImage": "/products/1007/swatch-black.jpg",
+        "images": [
+          "/products/1007/black.jpg"
+        ],
+        "stockBySize": {
+          "M": 22,
+          "L": 16,
+          "XL": 8
+        }
+      },
+      {
+        "id": "var-1007-lavender",
+        "colourName": "Lavender",
+        "colourSlug": "lavender",
+        "hex": "#B9A5E8",
+        "patternImage": "/products/1007/swatch-lavender.jpg",
+        "images": [
+          "/products/1007/lavender.jpg"
+        ],
+        "stockBySize": {
+          "M": 8,
+          "L": 5,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-1007-grey",
+        "colourName": "Grey",
+        "colourSlug": "grey",
+        "hex": "#111111",
+        "patternImage": "/products/1007/swatch-grey.jpg",
+        "images": [
+          "/products/1007/grey.jpg"
+        ],
+        "stockBySize": {
+          "M": 10,
+          "L": 7,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-1007-chocolate",
+        "colourName": "Chocolate",
+        "colourSlug": "chocolate",
+        "hex": "#8A5A3C",
+        "patternImage": "/products/1007/swatch-chocolate.jpg",
+        "images": [
+          "/products/1007/chocolate.jpg"
+        ],
+        "stockBySize": {
+          "M": 9,
+          "L": 6,
+          "XL": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-102",
+    "slug": "tai-dai-print-half-sleeve",
+    "pno": "102",
+    "name": "Tai Dai Print T-Shirt",
+    "category": "printed",
+    "categoryName": "Printed Tees",
+    "subCategory": "tai-dai-half-sleeve",
+    "subCategoryName": "Tai Dai Print Half Sleeve",
+    "tags": [
+      "printed",
+      "tai-dai",
+      "round-neck",
+      "signature"
+    ],
+    "sleeve": "half",
+    "neck": "round",
+    "fabric": "Printed",
+    "printType": "Tai Dai",
+    "mrp": 599,
+    "priceConfirmed": false,
+    "status": "active",
+    "badges": [
+      "Best Seller"
+    ],
+    "highlights": [
+      "Premium texture",
+      "Soft",
+      "Breathable",
+      "Shape retention",
+      "Moisture friendly",
+      "Stretchable"
+    ],
+    "description": "Organic tie-dye pigment blends with high-definition fastness. Moisture-friendly softness and four-way stretch response, perfect for casual statement wear.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.8,
+    "reviewCount": 184,
+    "createdAt": "2025-08-18",
+    "popularity": 96,
+    "catalogPoster": "/catalog/pno-102.jpg",
+    "variants": [
+      {
+        "id": "var-102-r-gold",
+        "colourName": "R.Gold",
+        "colourSlug": "r-gold",
+        "hex": "#111111",
+        "patternImage": "/products/102/swatch-r-gold.jpg",
+        "images": [
+          "/products/102/r-gold.jpg"
+        ],
+        "stockBySize": {
+          "M": 12,
+          "L": 10,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-102-lavender",
+        "colourName": "Lavender",
+        "colourSlug": "lavender",
+        "hex": "#B9A5E8",
+        "patternImage": "/products/102/swatch-lavender.jpg",
+        "images": [
+          "/products/102/lavender.jpg"
+        ],
+        "stockBySize": {
+          "M": 8,
+          "L": 6,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-102-d-grey",
+        "colourName": "D.Grey",
+        "colourSlug": "d-grey",
+        "hex": "#111111",
+        "patternImage": "/products/102/swatch-d-grey.jpg",
+        "images": [
+          "/products/102/d-grey.jpg"
+        ],
+        "stockBySize": {
+          "M": 11,
+          "L": 8,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-102-pista",
+        "colourName": "Pista",
+        "colourSlug": "pista",
+        "hex": "#A9D6C0",
+        "patternImage": "/products/102/swatch-pista.jpg",
+        "images": [
+          "/products/102/pista.jpg"
+        ],
+        "stockBySize": {
+          "M": 7,
+          "L": 5,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-102-choco",
+        "colourName": "Choco",
+        "colourSlug": "choco",
+        "hex": "#8C5A4A",
+        "patternImage": "/products/102/swatch-choco.jpg",
+        "images": [
+          "/products/102/choco.jpg"
+        ],
+        "stockBySize": {
+          "M": 9,
+          "L": 7,
+          "XL": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-1002",
+    "slug": "tai-dai-print-full-sleeve",
+    "pno": "1002",
+    "name": "Tai Dai Print Full Sleeve T-Shirt",
+    "category": "printed",
+    "categoryName": "Printed Tees",
+    "subCategory": "tai-dai-full-sleeve",
+    "subCategoryName": "Tai Dai Print Full Sleeve",
+    "tags": [
+      "printed",
+      "tai-dai",
+      "full-sleeve",
+      "round-neck",
+      "new-arrival"
+    ],
+    "sleeve": "full",
+    "neck": "round",
+    "fabric": "Printed",
+    "printType": "Tai Dai",
+    "mrp": 799,
+    "priceConfirmed": false,
+    "status": "active",
+    "badges": [
+      "New"
+    ],
+    "highlights": [
+      "Soft and comfortable",
+      "Breathable",
+      "Lightweight",
+      "Durable",
+      "Stretchable"
+    ],
+    "description": "Long-sleeve statement piece finished with radiant tie-dye gradients. Engineered for all-day comfort with breathable stretch yarn recovery.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.7,
+    "reviewCount": 98,
+    "createdAt": "2025-10-08",
+    "popularity": 92,
+    "catalogPoster": "/catalog/pno-1002.jpg",
+    "variants": [
+      {
+        "id": "var-1002-r-gold",
+        "colourName": "R.Gold",
+        "colourSlug": "r-gold",
+        "hex": "#111111",
+        "patternImage": "/products/1002/swatch-r-gold.jpg",
+        "images": [
+          "/products/1002/r-gold.jpg"
+        ],
+        "stockBySize": {
+          "M": 9,
+          "L": 7,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-1002-lavender",
+        "colourName": "Lavender",
+        "colourSlug": "lavender",
+        "hex": "#B9A5E8",
+        "patternImage": "/products/1002/swatch-lavender.jpg",
+        "images": [
+          "/products/1002/lavender.jpg"
+        ],
+        "stockBySize": {
+          "M": 6,
+          "L": 4,
+          "XL": 1
+        }
+      },
+      {
+        "id": "var-1002-d-grey",
+        "colourName": "D.Grey",
+        "colourSlug": "d-grey",
+        "hex": "#111111",
+        "patternImage": "/products/1002/swatch-d-grey.jpg",
+        "images": [
+          "/products/1002/d-grey.jpg"
+        ],
+        "stockBySize": {
+          "M": 10,
+          "L": 8,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-1002-pista",
+        "colourName": "Pista",
+        "colourSlug": "pista",
+        "hex": "#A9D6C0",
+        "patternImage": "/products/1002/swatch-pista.jpg",
+        "images": [
+          "/products/1002/pista.jpg"
+        ],
+        "stockBySize": {
+          "M": 8,
+          "L": 5,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-1002-choco",
+        "colourName": "Choco",
+        "colourSlug": "choco",
+        "hex": "#8C5A4A",
+        "patternImage": "/products/1002/swatch-choco.jpg",
+        "images": [
+          "/products/1002/choco.jpg"
+        ],
+        "stockBySize": {
+          "M": 7,
+          "L": 6,
+          "XL": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "prod-800",
+    "slug": "premium-printed-round-neck",
+    "pno": "800",
+    "name": "Premium Printed Round Neck T-Shirt",
+    "category": "printed",
+    "categoryName": "Printed Tees",
+    "subCategory": "premium-printed-round-neck",
+    "subCategoryName": "Premium Printed Round Neck",
+    "tags": [
+      "printed",
+      "round-neck"
+    ],
+    "sleeve": "half",
+    "neck": "round",
+    "fabric": "Printed",
+    "printType": "Brush/Geometric",
+    "mrp": 599,
+    "priceConfirmed": true,
+    "status": "active",
+    "badges": [
+      "New"
+    ],
+    "highlights": [
+      "Premium fabric",
+      "Bright and long-lasting print",
+      "Soft and comfortable",
+      "Trendy look"
+    ],
+    "description": "Dynamic brushstrokes and graphic geometric prints created for bold self-expression. High-density pigment application ensures long-lasting brightness.",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "rating": 4.6,
+    "reviewCount": 73,
+    "createdAt": "2025-10-04",
+    "popularity": 83,
+    "catalogPoster": "/catalog/pno-800.jpg",
+    "variants": [
+      {
+        "id": "var-800-d1",
+        "colourName": "Design 01",
+        "colourSlug": "design-01",
+        "hex": "#1B2A4A",
+        "patternImage": "/products/800/swatch-design-01.jpg",
+        "images": [
+          "/products/800/design-01.jpg"
+        ],
+        "stockBySize": {
+          "M": 8,
+          "L": 6,
+          "XL": 3
+        }
+      },
+      {
+        "id": "var-800-d2",
+        "colourName": "Design 02",
+        "colourSlug": "design-02",
+        "hex": "#1F4D3A",
+        "patternImage": "/products/800/swatch-design-02.jpg",
+        "images": [
+          "/products/800/design-02.jpg"
+        ],
+        "stockBySize": {
+          "M": 9,
+          "L": 7,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-800-d3",
+        "colourName": "Design 03",
+        "colourSlug": "design-03",
+        "hex": "#4C79C6",
+        "patternImage": "/products/800/swatch-design-03.jpg",
+        "images": [
+          "/products/800/design-03.jpg"
+        ],
+        "stockBySize": {
+          "M": 6,
+          "L": 4,
+          "XL": 2
+        }
+      },
+      {
+        "id": "var-800-d4",
+        "colourName": "Design 04",
+        "colourSlug": "design-04",
+        "hex": "#8D8D92",
+        "patternImage": "/products/800/swatch-design-04.jpg",
+        "images": [
+          "/products/800/design-04.jpg"
+        ],
+        "stockBySize": {
+          "M": 11,
+          "L": 8,
+          "XL": 4
+        }
+      },
+      {
+        "id": "var-800-d5",
+        "colourName": "Design 05",
+        "colourSlug": "design-05",
+        "hex": "#2F3338",
+        "patternImage": "/products/800/swatch-design-05.jpg",
+        "images": [
+          "/products/800/design-05.jpg"
+        ],
+        "stockBySize": {
+          "M": 7,
+          "L": 5,
+          "XL": 1
+        }
+      }
+    ]
+  }
+]

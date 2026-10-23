@@ -149,10 +149,16 @@ npm --workspace=apps/api run test
 
 ---
 
-## Storefront Integration
-The customer storefront repository ([Ateevibes_Website](https://github.com/namanlunia/Ateevibes_Website)) is pre-configured with `src/services/apiClient.ts`.
-By default it points to `http://localhost:3000/api/v1` (configurable via `VITE_API_BASE_URL`).
-If the backend is not running, the storefront automatically falls back to local storage and offline catalog with zero downtime.
+## Storefront API Surface
+The authoritative contract lives in packages/shared/src/contract.ts (API_ROUTES, PROMO_CODES, SHOPPING_MODEL, computeShippingAndTotals, and checkout DTOs):
+- **Auth**: `POST /auth/customer/login`, `POST /auth/customer/signup`, `POST /auth/refresh`, `GET /auth/me`
+- **Products**: `GET /products`, `GET /products/:slug`, `GET /products/pno/:pno`, `GET /products/:id/related`, `GET /products/curated/bestsellers`, `GET /products/curated/new-arrivals`
+- **Checkout**: `POST /checkout/quote`, `POST /checkout/create-order`
+- **Payments**: `POST /payments/create-order`, `POST /payments/verify`
+- **Orders**: `GET /orders/lookup?contact=...`, `GET /orders/my-orders`, `GET /orders/:id`
+
+> **Warning: Mock / Demo Mode is Dev-Only**
+> Mock fallbacks (disconnected Prisma database simulation, placeholder Razorpay signatures `demo_verified`, unsigned webhooks) operate **strictly** when `NODE_ENV !== "production"`. In production, real PostgreSQL persistence, genuine Razorpay HMAC SHA-256 signatures, and production JWT secrets are strictly enforced fail-fast.
 
 ---
 

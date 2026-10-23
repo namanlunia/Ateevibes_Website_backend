@@ -81,7 +81,7 @@ export const SettingsPage: React.FC = () => {
 
           <div className="p-3 bg-ivory rounded-lg border border-sandstone">
             <span className="text-[10px] uppercase font-bold text-ink-500 block">Atelier Origin</span>
-            <span className="font-semibold text-obsidian text-sm">Surat, Gujarat, India</span>
+            <span className="font-semibold text-obsidian text-sm">Mumbai, Maharashtra, India</span>
           </div>
 
           <div className="p-3 bg-ivory rounded-lg border border-sandstone">

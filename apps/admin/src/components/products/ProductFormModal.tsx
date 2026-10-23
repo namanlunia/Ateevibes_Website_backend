@@ -128,7 +128,7 @@ export const ProductFormModal: React.FC<ProductFormModalProps> = ({
       setStatus("active");
       setBadges("Best Seller");
       setHighlights("Breathable Knit, Zero Shrinkage, Contour Fit");
-      setDescription("Signature luxury architectural knit crafted in Surat, India.");
+      setDescription("Signature luxury architectural knit crafted in Mumbai, India.");
       setVariants([
         {
           sku: "",

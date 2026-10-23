@@ -54,7 +54,7 @@ export const Sidebar: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
               <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-gold block">
                 Ateevibes Operations
               </span>
-              <span className="text-xs font-serif italic text-sandstone/70">Surat, Gujarat</span>
+              <span className="text-xs font-serif italic text-sandstone/70">Mumbai, Maharashtra</span>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ export const CollectionsPage: React.FC = () => {
   const [hero, setHero] = useState({
     eyebrow: '2026 Small Batch Collection',
     headline: 'Modern Luxury in Motion',
-    subheadline: 'Architectural knitwear and precision garment construction straight from our Surat atelier.',
+    subheadline: 'Architectural knitwear and precision garment construction straight from our Mumbai atelier.',
     ctaText: 'Explore Collection',
     ctaLink: '/shop',
   });

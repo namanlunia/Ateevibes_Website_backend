@@ -200,7 +200,7 @@ export const ReceiveStockModal: React.FC<ReceiveStockModalProps> = ({
             <textarea
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              placeholder="Atelier inspection passed, packed in master carton..."
+              placeholder="Ateevibes inspection passed, packed in master carton..."
               rows={2}
               className="w-full px-3 py-2 bg-ivory border border-sandstone rounded-lg focus:outline-none focus:border-gold text-obsidian"
             />

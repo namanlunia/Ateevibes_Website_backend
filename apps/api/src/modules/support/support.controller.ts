@@ -66,7 +66,7 @@ export class SupportController {
   ) {
     return this.supportService.addMessage(id, {
       senderType: 'STAFF',
-      senderName: staffName || 'Atelier Concierge',
+      senderName: staffName || 'Ateevibes Concierge',
       message: body.message,
       isInternalNote: body.isInternalNote ?? false,
       statusUpdate: body.statusUpdate,

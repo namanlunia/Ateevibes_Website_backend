@@ -231,7 +231,7 @@ export const OrdersPage: React.FC = () => {
               <div className="flex items-center gap-2">
                 {selectedOrder.status === 'placed' && (
                   <button
-                    onClick={() => handleUpdateStatus(selectedOrder.id, 'packed', 'Items picked and packed in atelier')}
+                    onClick={() => handleUpdateStatus(selectedOrder.id, 'packed', 'Items picked and packed at Ateevibes Mumbai')}
                     disabled={isUpdating}
                     className="btn-dark px-3.5 py-1.5 text-xs font-semibold inline-flex items-center gap-1.5"
                   >

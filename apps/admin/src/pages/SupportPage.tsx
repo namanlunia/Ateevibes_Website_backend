@@ -149,7 +149,7 @@ export const SupportPage: React.FC = () => {
                       <div className="flex items-center justify-between gap-3 mb-1 text-[10px]">
                         <span className="font-bold uppercase tracking-wider flex items-center gap-1">
                           {isInternal && <Lock className="w-3 h-3 text-amber-700" />}
-                          {isInternal ? 'Internal Atelier Note' : msg.senderName}
+                          {isInternal ? 'Internal Ateevibes Note' : msg.senderName}
                         </span>
                         <span className="opacity-70 font-mono">
                           {new Date(msg.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
@@ -197,7 +197,7 @@ export const SupportPage: React.FC = () => {
                     onChange={(e) => setReplyMessage(e.target.value)}
                     placeholder={
                       isInternalNote
-                        ? 'Write a private note visible only to atelier staff...'
+                        ? 'Write a private note visible only to Ateevibes staff...'
                         : 'Write a response to the customer...'
                     }
                     rows={2}
@@ -218,7 +218,7 @@ export const SupportPage: React.FC = () => {
             <div className="flex-1 flex flex-col items-center justify-center p-8 text-center text-ink-500">
               <MessageSquare className="w-12 h-12 text-sandstone mb-2" />
               <p className="text-sm font-semibold text-obsidian">Select an inquiry to view conversation</p>
-              <p className="text-xs text-ink-500">Reply directly to customers or add private atelier notes</p>
+              <p className="text-xs text-ink-500">Reply directly to customers or add private Ateevibes notes</p>
             </div>
           )}
         </div>

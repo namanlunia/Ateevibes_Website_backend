@@ -31,7 +31,7 @@ export class ShipmentsService {
         events: {
           create: {
             status: 'DISPATCHED',
-            location: 'Surat Atelier Hub',
+            location: 'Ateevibes Mumbai Hub',
             notes: `Dispatched via ${data.courier} (AWB: ${data.trackingNumber})`,
           },
         },

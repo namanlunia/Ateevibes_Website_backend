@@ -63,7 +63,7 @@ export const SettingsPage: React.FC = () => {
       {/* Header */}
       <div>
         <h2 className="font-serif text-2xl sm:text-3xl font-normal text-obsidian">Store Settings & Staff</h2>
-        <p className="text-xs text-ink-600 mt-0.5">Atelier configuration, policy statements, and role-based staff management</p>
+        <p className="text-xs text-ink-600 mt-0.5">Ateevibes configuration, policy statements, and role-based staff management</p>
       </div>
 
       {/* Store Parameters Card */}
@@ -80,7 +80,7 @@ export const SettingsPage: React.FC = () => {
           </div>
 
           <div className="p-3 bg-ivory rounded-lg border border-sandstone">
-            <span className="text-[10px] uppercase font-bold text-ink-500 block">Atelier Origin</span>
+            <span className="text-[10px] uppercase font-bold text-ink-500 block">Ateevibes Origin</span>
             <span className="font-semibold text-obsidian text-sm">Mumbai, Maharashtra, India</span>
           </div>
 
@@ -97,7 +97,7 @@ export const SettingsPage: React.FC = () => {
           <div className="p-3 bg-ivory rounded-lg border border-sandstone sm:col-span-2">
             <span className="text-[10px] uppercase font-bold text-ink-500 block">Return Policy Rule</span>
             <span className="font-semibold text-obsidian text-xs">
-              Atelier batch production. Sales final upon delivery unless transit damage is verified within 48 hours. No 7-day return policy.
+              Ateevibes batch production. Sales final upon delivery unless transit damage is verified within 48 hours. No 7-day return policy.
             </span>
           </div>
         </div>

@@ -33,7 +33,7 @@ export const OverviewPage: React.FC = () => {
       <div className="p-6 rounded-2xl bg-obsidian text-ivory border border-sandstone/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-luxury">
         <div>
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold block mb-1">
-            Mumbai Atelier Live Operations
+            Ateevibes Mumbai Live Operations
           </span>
           <h2 className="font-serif text-2xl sm:text-3xl font-normal text-white">
             Operational Overview & Dispatch Health

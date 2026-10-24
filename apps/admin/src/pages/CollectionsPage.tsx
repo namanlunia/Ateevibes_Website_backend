@@ -6,19 +6,19 @@ export const CollectionsPage: React.FC = () => {
   const [hero, setHero] = useState({
     eyebrow: '2026 Small Batch Collection',
     headline: 'Modern Luxury in Motion',
-    subheadline: 'Architectural knitwear and precision garment construction straight from our Mumbai atelier.',
+    subheadline: 'Architectural knitwear and precision garment construction straight from Ateevibes Mumbai.',
     ctaText: 'Explore Collection',
     ctaLink: '/shop',
   });
 
   const [sections, setSections] = useState([
-    { key: 'marquee', title: 'Atelier Statement Marquee', isVisible: true },
+    { key: 'marquee', title: 'Ateevibes Statement Marquee', isVisible: true },
     { key: 'categories', title: 'Signature Fabric Weaves Grid', isVisible: true },
     { key: 'new-season', title: 'New Season Architectural Knits', isVisible: true },
     { key: 'same-print', title: 'Same Print Different Vibes Showcase', isVisible: true },
     { key: 'fabric-stories', title: 'Fabric Technology & Texture Stories', isVisible: true },
     { key: 'bestsellers', title: 'Community Best Sellers Carousel', isVisible: true },
-    { key: 'value-props', title: 'Atelier Direct Value Propositions', isVisible: true },
+    { key: 'value-props', title: 'Ateevibes Direct Value Propositions', isVisible: true },
     { key: 'vip-club', title: 'VIP Rotation Access Card', isVisible: true },
   ]);
 

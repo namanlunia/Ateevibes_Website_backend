@@ -60,7 +60,7 @@ export const InventoryPage: React.FC = () => {
           size: selectedStock.size,
           quantityChange: Number(quantityChange),
           type: adjustType,
-          notes: notes.trim() || 'Manual atelier audit adjustment',
+          notes: notes.trim() || 'Manual audit adjustment by Ateevibes staff',
         }),
       });
       setSelectedStock(null);

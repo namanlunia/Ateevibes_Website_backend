@@ -13,8 +13,8 @@ export class SettingsService {
       freeShippingThreshold: 1499,
       standardShippingFee: 79,
       codFee: 49,
-      atelierOrigin: 'Surat, Gujarat, India',
-      returnPolicy: 'Atelier batch production. Sales final unless transit damage reported within 48 hours.',
+      ateOrigin: 'Mumbai, Maharashtra, India',
+      returnPolicy: 'Ateevibes batch production. Sales final unless transit damage reported within 48 hours.',
     };
   }
 

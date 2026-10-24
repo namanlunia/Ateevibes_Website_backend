@@ -288,11 +288,11 @@ async function main() {
   // 4. Store Settings
   const settings = [
     { key: "STORE_NAME", value: "Ateevibes", description: "Online menswear and T-shirt brand" },
-    { key: "ATELIER_ORIGIN", value: "Surat, Gujarat, India", description: "Manufacturing atelier location" },
+    { key: "ATEEVIBES_ORIGIN", value: "Mumbai, Maharashtra, India", description: "Ateevibes manufacturing hub location" },
     { key: "FREE_SHIPPING_THRESHOLD", value: "1499", description: "Cart threshold in INR for free standard delivery" },
     { key: "STANDARD_SHIPPING_FEE", value: "79", description: "Standard courier delivery fee in INR" },
     { key: "COD_FEE", value: "49", description: "Cash on delivery handling fee in INR" },
-    { key: "RETURN_POLICY_STATEMENT", value: "Atelier limited batch production. Sales final upon delivery unless transit damage is verified within 48 hours.", description: "Authoritative return policy note" },
+    { key: "RETURN_POLICY_STATEMENT", value: "Ateevibes limited batch production. Sales final upon delivery unless transit damage is verified within 48 hours.", description: "Authoritative return policy note" },
   ];
 
   for (const s of settings) {
@@ -310,9 +310,9 @@ async function main() {
     update: {},
     create: {
       id: "sup-surat-01",
-      name: "Surat Textile Atelier",
+      name: "Ateevibes Surat Textiles",
       contactName: "Ramesh Patel",
-      email: "production@surat-atelier.com",
+      email: "production@ateevibes.com",
       phone: "+919825000000",
       address: "Ring Road Textile Market, Surat, Gujarat",
       notes: "Master weaver and dyer for China jacquard and honeycomb waffle knits",

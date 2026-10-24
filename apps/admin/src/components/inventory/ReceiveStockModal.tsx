@@ -189,7 +189,7 @@ export const ReceiveStockModal: React.FC<ReceiveStockModalProps> = ({
               type="text"
               value={referencePOId}
               onChange={(e) => setReferencePOId(e.target.value)}
-              placeholder="e.g. PO-SURAT-2026-0042"
+              placeholder="e.g. PO-MUMBAI-2026-0042"
               className="w-full px-3 py-2 bg-ivory border border-sandstone rounded-lg focus:outline-none focus:border-gold font-mono text-obsidian"
             />
           </div>

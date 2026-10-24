@@ -71,17 +71,17 @@ export class ShippingAddressDto implements ShippingAddressPayload {
   @IsString()
   landmark?: string;
 
-  @ApiProperty({ example: "Surat" })
+  @ApiProperty({ example: "Mumbai" })
   @IsString()
   @IsNotEmpty()
   city!: string;
 
-  @ApiProperty({ example: "Gujarat" })
+  @ApiProperty({ example: "Maharashtra" })
   @IsString()
   @IsNotEmpty()
   state!: string;
 
-  @ApiProperty({ example: "395007" })
+  @ApiProperty({ example: "400001" })
   @IsString()
   @IsNotEmpty()
   pincode!: string;

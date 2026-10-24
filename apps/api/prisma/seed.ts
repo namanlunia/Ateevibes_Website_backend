@@ -306,15 +306,15 @@ async function main() {
 
   // 5. Supplier
   await prisma.supplier.upsert({
-    where: { id: "sup-surat-01" },
+    where: { id: "sup-mumbai-01" },
     update: {},
     create: {
-      id: "sup-surat-01",
-      name: "Ateevibes Surat Textiles",
+      id: "sup-mumbai-01",
+      name: "Ateevibes Mumbai Textiles",
       contactName: "Ramesh Patel",
       email: "production@ateevibes.com",
-      phone: "+919825000000",
-      address: "Ring Road Textile Market, Surat, Gujarat",
+      phone: "+919820000000",
+      address: "Kalbadevi Textile Market, Mumbai, Maharashtra",
       notes: "Master weaver and dyer for China jacquard and honeycomb waffle knits",
     },
   });
